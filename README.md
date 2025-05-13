@@ -1,73 +1,36 @@
-# Welcome to your Lovable project
+# 🕒 My Clock Bliss – Analog & Digital Clock + Study Timer ⏳
 
-## Project info
+Selamat datang di **Jakarta Clock Bliss** – aplikasi web interaktif yang menampilkan **jam analog dan digital realtime** sesuai zona waktu **Jakarta (WIB - UTC+7)**, lengkap dengan **study timer** ala Pomodoro untuk menemani sesi belajar kamu!
 
-**URL**: https://lovable.dev/projects/f8748d43-3476-41d3-9cf6-e3fdea65da2b
+---
 
-## How can I edit this code?
+## 🌟 Fitur Unggulan
 
-There are several ways of editing your application.
+- 🕰️ **Jam Analog Realtime**  
+  Desain estetik dengan animasi halus, menampilkan waktu secara akurat sesuai zona Jakarta.
 
-**Use Lovable**
+- 💻 **Jam Digital Modern**  
+  Menampilkan waktu dalam format digital dengan tampilan minimalis dan warna abu-abu elegan.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f8748d43-3476-41d3-9cf6-e3fdea65da2b) and start prompting.
+- ⏲️ **Study Timer (Pomodoro Style)**  
+  Atur waktu belajar (default 25 menit) dan mulai produktif! Disertai tombol `Start` dan `Reset` yang intuitif.
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🎨 **Tema Netral & Nyaman di Mata**  
+  Warna abu-abu menggantikan ungu untuk kesan profesional dan tidak mencolok – cocok untuk suasana belajar fokus.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🔧 Teknologi yang Digunakan
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **HTML5 + CSS3 + JavaScript**
+- **Tailwind CSS** untuk styling responsif
+- **Lovable.dev** untuk kolaborasi dan pembuatan UI intuitif
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Cara Menjalankan
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f8748d43-3476-41d3-9cf6-e3fdea65da2b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### 📦 1. Clone atau Download
+```bash
+git clone https://github.com/username/jakarta-clock-bliss.git
+cd jakarta-clock-bliss
