@@ -76,6 +76,6 @@ http://localhost:5173
 
 ### ⏲️ Study Timer Aktif
 
-![Study Timer](./public/screenshots/study-timer.png)
+![Study Timer](./public/screenshots/timer.png)
 
 
