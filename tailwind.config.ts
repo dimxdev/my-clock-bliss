@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				clock: {
+					face: '#f8f9fa',
+					border: '#9b87f5',
+					hour: '#7E69AB',
+					minute: '#8B5CF6',
+					second: '#F97316',
+					numbers: '#333',
+					shadow: 'rgba(0, 0, 0, 0.1)',
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-soft': {
+					'0%, 100%': { 
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						opacity: '0.9'
+					}
+				},
+				'tick': {
+					'0%': { transform: 'rotate(0deg)' },
+					'5%': { transform: 'rotate(6deg)' },
+					'10%': { transform: 'rotate(0deg)' }
+				},
+				'rotate-full': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
+				'tick': 'tick 1s linear infinite',
+				'rotate-full': 'rotate-full 60s linear infinite'
+			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif']
 			}
 		}
 	},
