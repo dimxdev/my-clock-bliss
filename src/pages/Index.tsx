@@ -10,7 +10,7 @@ const Index = () => {
       <div className="max-w-md w-full bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="p-8">
           <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
-            Jakarta Time <span className="text-sm font-normal">(UTC+7)</span>
+            My Clock <span className="text-sm font-normal">(UTC+7)</span>
           </h1>
           
           <div className="mb-8 flex justify-center">
