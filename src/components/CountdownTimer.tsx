@@ -107,7 +107,7 @@ const CountdownTimer: React.FC = () => {
     <div className="bg-gray-50 p-5 rounded-xl shadow-inner">
       {showCompleted ? (
         <div className="text-center py-4 animate-pulse-soft">
-          <h3 className="text-green-600 font-semibold text-xl mb-2">Time's Up!</h3>
+          <h3 className="text-gray-700 font-semibold text-xl mb-2">Time's Up!</h3>
           <p className="text-gray-600">Take a break before starting again</p>
         </div>
       ) : (
@@ -163,7 +163,7 @@ const CountdownTimer: React.FC = () => {
           <div className="flex justify-center gap-2 mt-4">
             {!isActive ? (
               <Button
-                className="bg-purple-600 hover:bg-purple-700 gap-2 rounded-full px-6"
+                className="bg-gray-700 hover:bg-gray-800 gap-2 rounded-full px-6"
                 onClick={startTimer}
               >
                 <Play className="h-4 w-4" /> Start
@@ -173,14 +173,14 @@ const CountdownTimer: React.FC = () => {
                 {!isPaused ? (
                   <Button
                     variant="outline"
-                    className="gap-2 rounded-full px-6 border-purple-200 hover:bg-purple-50"
+                    className="gap-2 rounded-full px-6 border-gray-200 hover:bg-gray-50"
                     onClick={pauseTimer}
                   >
                     <Pause className="h-4 w-4" /> Pause
                   </Button>
                 ) : (
                   <Button
-                    className="bg-purple-600 hover:bg-purple-700 gap-2 rounded-full px-6"
+                    className="bg-gray-700 hover:bg-gray-800 gap-2 rounded-full px-6"
                     onClick={startTimer}
                   >
                     <Play className="h-4 w-4" /> Resume
@@ -191,7 +191,7 @@ const CountdownTimer: React.FC = () => {
             
             <Button
               variant="outline"
-              className="gap-2 rounded-full px-6 border-purple-200 hover:bg-purple-50"
+              className="gap-2 rounded-full px-6 border-gray-200 hover:bg-gray-50"
               onClick={resetTimer}
             >
               <Timer className="h-4 w-4" /> Reset
@@ -201,7 +201,7 @@ const CountdownTimer: React.FC = () => {
           {isActive && (
             <div className="mt-4 bg-gray-100 h-1.5 rounded-full overflow-hidden">
               <div 
-                className="bg-purple-500 h-full transition-all ease-linear"
+                className="bg-gray-500 h-full transition-all ease-linear"
                 style={{ 
                   width: `${((minutes * 60 + seconds) / (isActive ? (minutes + seconds / 60) : 25) / 60) * 100}%` 
                 }}

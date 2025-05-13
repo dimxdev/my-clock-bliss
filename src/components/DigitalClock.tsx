@@ -48,7 +48,7 @@ const DigitalClock: React.FC = () => {
   
   return (
     <div className="text-center">
-      <div className="mb-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-4xl font-semibold py-3 px-4 rounded-lg shadow-md animate-pulse-soft">
+      <div className="mb-1 bg-gradient-to-r from-gray-600 to-gray-700 text-white text-4xl font-semibold py-3 px-4 rounded-lg shadow-md animate-pulse-soft">
         {time}
       </div>
       <p className="text-gray-500 text-sm mt-2">{date}</p>

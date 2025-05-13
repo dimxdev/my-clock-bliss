@@ -6,7 +6,7 @@ import CountdownTimer from '@/components/CountdownTimer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen font-poppins bg-gradient-to-br from-purple-50 to-blue-100 flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen font-poppins bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="p-8">
           <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">

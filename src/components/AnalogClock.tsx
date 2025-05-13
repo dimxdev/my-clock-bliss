@@ -46,7 +46,7 @@ const AnalogClock: React.FC = () => {
         return (
           <span
             key={i}
-            className={`absolute font-medium ${isMainHour ? 'text-lg text-purple-700' : 'text-sm text-gray-600'}`}
+            className={`absolute font-medium ${isMainHour ? 'text-lg text-gray-700' : 'text-sm text-gray-600'}`}
             style={{
               transform: `rotate(${rotation}deg) translate(0, -88px) rotate(-${rotation}deg)`,
             }}
@@ -57,7 +57,7 @@ const AnalogClock: React.FC = () => {
       })}
       
       {/* Center dot */}
-      <div className="absolute w-3 h-3 bg-purple-900 rounded-full z-10"></div>
+      <div className="absolute w-3 h-3 bg-gray-900 rounded-full z-10"></div>
       
       {/* Hour hand */}
       <div 
@@ -100,7 +100,7 @@ const AnalogClock: React.FC = () => {
         return (
           <div
             key={i}
-            className={`absolute ${isHourMark ? 'h-2 w-1 bg-purple-600' : 'h-1 w-0.5 bg-purple-300'}`}
+            className={`absolute ${isHourMark ? 'h-2 w-1 bg-gray-600' : 'h-1 w-0.5 bg-gray-300'}`}
             style={{
               transform: `rotate(${rotation}deg) translate(0, -107px)`,
             }}

@@ -65,10 +65,10 @@ export default {
 				},
 				clock: {
 					face: '#f8f9fa',
-					border: '#9b87f5',
-					hour: '#7E69AB',
-					minute: '#8B5CF6',
-					second: '#F97316',
+					border: '#9e9e9e',
+					hour: '#555555',
+					minute: '#666666',
+					second: '#888888',
 					numbers: '#333',
 					shadow: 'rgba(0, 0, 0, 0.1)',
 				}
