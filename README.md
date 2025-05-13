@@ -1,36 +1,81 @@
-# 🕒 My Clock Bliss – Analog & Digital Clock + Study Timer ⏳
 
-Selamat datang di **Jakarta Clock Bliss** – aplikasi web interaktif yang menampilkan **jam analog dan digital realtime** sesuai zona waktu **Jakarta (WIB - UTC+7)**, lengkap dengan **study timer** ala Pomodoro untuk menemani sesi belajar kamu!
+# 🕒 My Clock Bliss – Realtime Clock & Study Timer Web App
 
----
+**My Clock Bliss** adalah aplikasi web interaktif berbasis **React + TypeScript** yang menampilkan:
+- ⏰ Jam analog dan digital secara realtime berdasarkan waktu **Jakarta (WIB - UTC+7)**
+- ⏳ Study Timer sederhana ala Pomodoro untuk membantu sesi belajar fokus
+- 🎨 UI modern dengan tema abu-abu elegan dan animasi halus
 
-## 🌟 Fitur Unggulan
-
-- 🕰️ **Jam Analog Realtime**  
-  Desain estetik dengan animasi halus, menampilkan waktu secara akurat sesuai zona Jakarta.
-
-- 💻 **Jam Digital Modern**  
-  Menampilkan waktu dalam format digital dengan tampilan minimalis dan warna abu-abu elegan.
-
-- ⏲️ **Study Timer (Pomodoro Style)**  
-  Atur waktu belajar (default 25 menit) dan mulai produktif! Disertai tombol `Start` dan `Reset` yang intuitif.
-
-- 🎨 **Tema Netral & Nyaman di Mata**  
-  Warna abu-abu menggantikan ungu untuk kesan profesional dan tidak mencolok – cocok untuk suasana belajar fokus.
+> Dibuat untuk menemani kegiatan belajar agar lebih teratur dan menyenangkan 🎓
 
 ---
 
 ## 🔧 Teknologi yang Digunakan
 
-- **HTML5 + CSS3 + JavaScript**
-- **Tailwind CSS** untuk styling responsif
-- **Lovable.dev** untuk kolaborasi dan pembuatan UI intuitif
+- ⚛️ React
+- 🟦 TypeScript
+- 💨 Tailwind CSS
+- 📦 Vite (untuk bundler modern dan cepat)
 
 ---
 
-## 🚀 Cara Menjalankan
+## 🖥️ Fitur Utama
 
-### 📦 1. Clone atau Download
+### 🕰️ Jam Analog
+- Dibuat dengan elemen SVG
+- Jarum jam dengan animasi realtime
+- Sinkron dengan waktu Jakarta (WIB)
+
+### 💻 Jam Digital
+- Update setiap detik
+- Menampilkan waktu dan tanggal dalam format Indonesia
+
+### ⏲️ Study Timer
+- Dapat disesuaikan (1–60 menit)
+- Tombol Start / Reset
+- Progress bar animasi
+- Bergaya Pomodoro (default 25 menit)
+
+### 🎨 UI dan Tema
+- Warna abu-abu lembut (grayscale) menggantikan tema ungu default
+- Responsif untuk tampilan desktop & mobile
+- Font bersahabat, cocok untuk suasana belajar
+
+---
+
+## 🛠️ Cara Menjalankan Secara Lokal
+
+### 1. Clone Repository
+
 ```bash
-git clone https://github.com/username/jakarta-clock-bliss.git
-cd jakarta-clock-bliss
+git clone https://github.com/username/my-clock-bliss.git
+cd my-clock-bliss
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Jalankan Aplikasi
+
+```bash
+npm run dev
+```
+
+Setelah itu, buka browser dan akses:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🖼️ Cuplikan Layar
+
+### ⏲️ Study Timer Aktif
+
+![Study Timer](./public/screenshots/study-timer.png)
+
+
