@@ -37,7 +37,7 @@
 - Bergaya Pomodoro (default 25 menit)
 
 ### 🎨 UI dan Tema
-- Warna abu-abu lembut (grayscale) menggantikan tema ungu default
+- Warna abu-abu lembut (grayscale) 
 - Responsif untuk tampilan desktop & mobile
 - Font bersahabat, cocok untuk suasana belajar
 
