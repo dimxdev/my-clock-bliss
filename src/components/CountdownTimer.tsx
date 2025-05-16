@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
@@ -104,11 +103,11 @@ const CountdownTimer: React.FC = () => {
   };
   
   return (
-    <div className="bg-gray-50 p-5 rounded-xl shadow-inner">
+    <div className="bg-gray-50 dark:bg-gray-700 p-5 rounded-xl shadow-inner">
       {showCompleted ? (
         <div className="text-center py-4 animate-pulse-soft">
-          <h3 className="text-gray-700 font-semibold text-xl mb-2">Time's Up!</h3>
-          <p className="text-gray-600">Take a break before starting again</p>
+          <h3 className="text-gray-700 dark:text-gray-200 font-semibold text-xl mb-2">Time's Up!</h3>
+          <p className="text-gray-600 dark:text-gray-300">Take a break before starting again</p>
         </div>
       ) : (
         <>
@@ -118,25 +117,25 @@ const CountdownTimer: React.FC = () => {
                 <Button 
                   variant="outline"
                   size="icon"
-                  className="rounded-full hover:bg-gray-100 transition-colors"
+                  className="rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                   onClick={decrementMinutes}
                 >
                   <ArrowDown className="h-4 w-4" />
                 </Button>
-                <div className="text-3xl font-semibold text-gray-800 w-20 text-center">
+                <div className="text-3xl font-semibold text-gray-800 dark:text-gray-100 w-20 text-center">
                   {minutes}
                 </div>
                 <Button 
                   variant="outline"
                   size="icon"
-                  className="rounded-full hover:bg-gray-100 transition-colors"
+                  className="rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                   onClick={incrementMinutes}
                 >
                   <ArrowUp className="h-4 w-4" />
                 </Button>
               </div>
             ) : (
-              <div className="text-3xl font-semibold text-gray-800">
+              <div className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
                 {formatTime(minutes, seconds)}
               </div>
             )}
@@ -152,7 +151,7 @@ const CountdownTimer: React.FC = () => {
                 onValueChange={handleMinutesChange}
                 className="py-2"
               />
-              <div className="flex justify-between text-xs text-gray-500 mt-1">
+              <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                 <span>1 min</span>
                 <span>30 min</span>
                 <span>60 min</span>
@@ -163,7 +162,7 @@ const CountdownTimer: React.FC = () => {
           <div className="flex justify-center gap-2 mt-4">
             {!isActive ? (
               <Button
-                className="bg-gray-700 hover:bg-gray-800 gap-2 rounded-full px-6"
+                className="bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-500 gap-2 rounded-full px-6"
                 onClick={startTimer}
               >
                 <Play className="h-4 w-4" /> Start
@@ -173,14 +172,14 @@ const CountdownTimer: React.FC = () => {
                 {!isPaused ? (
                   <Button
                     variant="outline"
-                    className="gap-2 rounded-full px-6 border-gray-200 hover:bg-gray-50"
+                    className="gap-2 rounded-full px-6 border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600"
                     onClick={pauseTimer}
                   >
                     <Pause className="h-4 w-4" /> Pause
                   </Button>
                 ) : (
                   <Button
-                    className="bg-gray-700 hover:bg-gray-800 gap-2 rounded-full px-6"
+                    className="bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-500 gap-2 rounded-full px-6"
                     onClick={startTimer}
                   >
                     <Play className="h-4 w-4" /> Resume
@@ -191,7 +190,7 @@ const CountdownTimer: React.FC = () => {
             
             <Button
               variant="outline"
-              className="gap-2 rounded-full px-6 border-gray-200 hover:bg-gray-50"
+              className="gap-2 rounded-full px-6 border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600"
               onClick={resetTimer}
             >
               <Timer className="h-4 w-4" /> Reset
@@ -199,9 +198,9 @@ const CountdownTimer: React.FC = () => {
           </div>
           
           {isActive && (
-            <div className="mt-4 bg-gray-100 h-1.5 rounded-full overflow-hidden">
+            <div className="mt-4 bg-gray-100 dark:bg-gray-600 h-1.5 rounded-full overflow-hidden">
               <div 
-                className="bg-gray-500 h-full transition-all ease-linear"
+                className="bg-gray-500 dark:bg-gray-400 h-full transition-all ease-linear"
                 style={{ 
                   width: `${((minutes * 60 + seconds) / (isActive ? (minutes + seconds / 60) : 25) / 60) * 100}%` 
                 }}
@@ -211,7 +210,7 @@ const CountdownTimer: React.FC = () => {
         </>
       )}
       
-      <div className="mt-4 text-center text-xs text-gray-500">
+      <div className="mt-4 text-center text-xs text-gray-500 dark:text-gray-400">
         {isActive ? "Focus on your work 🧠" : "Set timer for your study session"}
       </div>
     </div>

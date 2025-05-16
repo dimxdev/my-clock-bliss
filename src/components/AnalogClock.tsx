@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
+import { useTheme } from '@/context/ThemeContext';
 
 const AnalogClock: React.FC = () => {
   const [time, setTime] = useState(new Date());
+  const { theme } = useTheme();
   
   useEffect(() => {
     // Set to Jakarta timezone (UTC+7)
@@ -37,8 +39,20 @@ const AnalogClock: React.FC = () => {
   const minutesDegrees = minutes * 6; // 6 degrees per minute
   const secondsDegrees = seconds * 6; // 6 degrees per second
   
+  // Define colors based on theme
+  const clockFaceBg = theme === 'dark' ? 'bg-gray-700' : 'bg-clock-face';
+  const clockBorder = theme === 'dark' ? 'border-gray-600' : 'border-clock-border';
+  const hourHandBg = theme === 'dark' ? 'bg-gray-300' : 'bg-clock-hour';
+  const minuteHandBg = theme === 'dark' ? 'bg-gray-400' : 'bg-clock-minute';
+  const secondHandBg = theme === 'dark' ? 'bg-gray-500' : 'bg-clock-second';
+  const centerDotBg = theme === 'dark' ? 'bg-gray-300' : 'bg-gray-900';
+  const hourMarkBg = theme === 'dark' ? 'bg-gray-400' : 'bg-gray-600';
+  const minuteMarkBg = theme === 'dark' ? 'bg-gray-500' : 'bg-gray-300';
+  const hourTextColor = theme === 'dark' ? 'text-gray-300' : 'text-gray-700';
+  const minuteTextColor = theme === 'dark' ? 'text-gray-400' : 'text-gray-600';
+  
   return (
-    <div className="relative w-64 h-64 rounded-full border-4 border-clock-border bg-clock-face shadow-lg flex items-center justify-center">
+    <div className={`relative w-64 h-64 rounded-full border-4 ${clockBorder} ${clockFaceBg} shadow-lg flex items-center justify-center transition-colors duration-300`}>
       {/* Clock numbers */}
       {[...Array(12)].map((_, i) => {
         const rotation = i * 30;
@@ -46,7 +60,7 @@ const AnalogClock: React.FC = () => {
         return (
           <span
             key={i}
-            className={`absolute font-medium ${isMainHour ? 'text-lg text-gray-700' : 'text-sm text-gray-600'}`}
+            className={`absolute font-medium ${isMainHour ? `text-lg ${hourTextColor}` : `text-sm ${minuteTextColor}`}`}
             style={{
               transform: `rotate(${rotation}deg) translate(0, -88px) rotate(-${rotation}deg)`,
             }}
@@ -57,11 +71,11 @@ const AnalogClock: React.FC = () => {
       })}
       
       {/* Center dot */}
-      <div className="absolute w-3 h-3 bg-gray-900 rounded-full z-10"></div>
+      <div className={`absolute w-3 h-3 ${centerDotBg} rounded-full z-10`}></div>
       
       {/* Hour hand */}
       <div 
-        className="absolute w-1.5 rounded-full bg-clock-hour origin-bottom z-[7] transition-transform"
+        className={`absolute w-1.5 rounded-full ${hourHandBg} origin-bottom z-[7] transition-transform`}
         style={{ 
           height: '60px',
           transform: `rotateZ(${hoursDegrees}deg)`,
@@ -72,7 +86,7 @@ const AnalogClock: React.FC = () => {
       
       {/* Minute hand */}
       <div 
-        className="absolute w-1 rounded-full bg-clock-minute origin-bottom z-[8] transition-transform"
+        className={`absolute w-1 rounded-full ${minuteHandBg} origin-bottom z-[8] transition-transform`}
         style={{ 
           height: '75px',
           transform: `rotateZ(${minutesDegrees}deg)`,
@@ -83,7 +97,7 @@ const AnalogClock: React.FC = () => {
       
       {/* Second hand */}
       <div 
-        className="absolute w-0.5 rounded-full bg-clock-second origin-bottom z-[9]"
+        className={`absolute w-0.5 rounded-full ${secondHandBg} origin-bottom z-[9]`}
         style={{ 
           height: '85px',
           transform: `rotateZ(${secondsDegrees}deg)`,
@@ -100,7 +114,7 @@ const AnalogClock: React.FC = () => {
         return (
           <div
             key={i}
-            className={`absolute ${isHourMark ? 'h-2 w-1 bg-gray-600' : 'h-1 w-0.5 bg-gray-300'}`}
+            className={`absolute ${isHourMark ? `h-2 w-1 ${hourMarkBg}` : `h-1 w-0.5 ${minuteMarkBg}`}`}
             style={{
               transform: `rotate(${rotation}deg) translate(0, -107px)`,
             }}
